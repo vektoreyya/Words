@@ -11,7 +11,6 @@ namespace words.Models
         public Guid Id { get; set; }
         public string Title { get; set; }
         public List<Word> Words { get; set; }
-		public String Description { get; set; }
         public List<Group> Groups { get; set; }
 
         public Language(Guid id, string title, List<Word> words, string description, List<Group> groups)
