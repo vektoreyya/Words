@@ -23,18 +23,12 @@ namespace words.Models
 
         public double getAverageLevel()
         {
-            double sum = 0;
-            foreach(var word in Words)
-            {
-                sum += word.Level;
-            }
-
-            return sum / Words.Count;
+            return Words.Sum(x => x.Level) / Words.Count;
         }
 
         public override string ToString()
         {
-            return Title;
+            return $"{Title} : {getAverageLevel()}";
         }
     }
 }
